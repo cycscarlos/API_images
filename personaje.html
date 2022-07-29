@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API - Personaje</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/personaje.css" />
+    <!--* header -->
+    <style>
+      * {
+        margin: 0;
+      }
+      .header {
+        width: 100% !important;
+        height: 6rem !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--* header -->
+    <iframe
+      class="header"
+      src="./header/header.html"
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
+
+    <!--_ Main section -->
+    <div class="personaje" id="personaje"></div>
+
+    <!--: Scroll Reveal animation library -->
+    <script src="./assets/js/scrollreveal.min.js"></script>
+    <script src="./assets/js/scrollReveal.js"></script>
+
+    <script>
+      const personaje = document.querySelector("#personaje");
+      const getParametros = new URLSearchParams(window.location.search);
+      const id = getParametros.get("id");
+      const getPersonaje = async (id) => {
+        const peticion = await fetch(
+          `https://rickandmortyapi.com/api/character/${id}`
+        );
+        const datos = await peticion.json();
+        const divPersonaje = document.createElement("div");
+        const imagen = document.createElement("img");
+        const nombre = document.createElement("p");
+        imagen.src = datos.image;
+        nombre.innerHTML = datos.name;
+        divPersonaje.appendChild(imagen);
+        divPersonaje.appendChild(nombre);
+        personaje.appendChild(divPersonaje);
+
+        console.log(datos);
+      };
+      getPersonaje(id);
+    </script>
+  </body>
+</html>
