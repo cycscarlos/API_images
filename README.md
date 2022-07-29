@@ -1,4 +1,4 @@
-<h2>API routine to extract clean images from JSONPlaceholder, and show them into the two websites using HTML, CSS & pure Javascript (without frameworks)</h2>
+<h2>API routine to extract clean images from Rick and Morty API, and show them into the two websites using HTML, CSS & pure Javascript (without frameworks)</h2>
 
 <br>
 
@@ -26,7 +26,7 @@ Take a look at the website at the following link [Github Pages] (https://cycscar
 <li>API routines using javascript vanilla only</li>
 <li>Easy and basic HTML & CSS files</li>
 <li>Is intent to introduce students into the API world in a basic manner</li>
-<li>In this exercise only gets images from JSONPlaceholder site and show this data in the browser</li>
+<li>In this exercise only gets images from Rick & Morty API site and show this data in the browser</li>
 <li>If the user hit in any image, the application brings to another site showing the only image touched</li>
 <li>The objetive is make double call to the API (using only fetch instructions)</li>
 
