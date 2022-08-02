@@ -9,13 +9,5 @@
 .imgPersonaje {
   border-radius: 50%;
   box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.5);
+  caret-color: rgba(0, 0, 0, 0);
 }
-/* h2,
-a {
-  color: #29445a;
-}
-p {
-  font-size: 1.5em;
-  margin-top: 2rem;
-  color: #29445a;
-} */
