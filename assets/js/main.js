@@ -11,6 +11,7 @@ const llamadaApi = async () => {
         const enlace = document.createElement('a')
         enlace.href = `personaje.html?id=${item.id}`
         imagen.src = item.image
+        imagen.classList.add('image')
         nombre.innerHTML = item.name
         personajeDiv.appendChild(imagen)
         enlace.appendChild(imagen)
